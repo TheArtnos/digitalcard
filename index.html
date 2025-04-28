@@ -27,6 +27,12 @@
     <link rel="stylesheet" href="style/app.css" />
 </head>
 <body>
+
+    <!-- BG -->
+    <video loop muted autoplay id="video">
+        <source src="images/202587-918431513_small.mp4" type="video/mp4">
+    </video>
+     <!-- start -->
     <div class="container">
         <div class="liner">
             <div class="header__image">
@@ -91,54 +97,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const backgrounds = [
-            "images/bg1.jpg",
-            "images/bg2.jpg",
-            "images/bg3.jpg",
-            "images/bg4.jpg",
-            "images/bg5.jpg",
-            "images/bg6.jpg",
-            "images/bg7.jpg",
-            "images/bg8.jpg",
-            "images/bg9.jpg",
-            "images/bg10.jpg",
-            "images/bg11.jpg",
-            "images/bg12.jpg",
-            "images/bg13.jpg",
-            "images/bg14.jpg",
-            "images/bg15.jpg",
-        ];
-
-        const preloadedImages = [];
-
-        function preloadImages(callback) {
-            let loadedCount = 0;
-            backgrounds.forEach((src, index) => {
-                const img = new Image();
-                img.src = src;
-                img.onload = () => {
-                    preloadedImages[index] = img;
-                    loadedCount++;
-                    if (loadedCount === backgrounds.length) {
-                        callback();
-                    }
-                };
-            });
-        }
-
-        function changeBackground() {
-            let randomIndex = Math.floor(Math.random() * backgrounds.length);
-            document.body.style.backgroundImage = `url('${preloadedImages[randomIndex].src}')`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundAttachment = "fixed";
-        }
-
-        preloadImages(() => {
-            changeBackground();
-        });
-    </script>
 </body>
 </html>
