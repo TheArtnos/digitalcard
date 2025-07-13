@@ -29,11 +29,14 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style/app.css" />
 </head>
-<body>
-
+<body onload="preloader()">
+  <!-- loading screen -->
+    <div class="loader-contaner">
+      <div class="loader"></div> 
+    </div>
   <!-- Background Video -->
   <video loop muted autoplay id="video">
-    <source src="images/202587-918431513_small.mp4" type="video/mp4">
+    <source src="images/bgv.mp4" type="video/mp4">
   </video>
 
   <!-- Main Container -->
@@ -96,5 +99,12 @@
     </div>
   </div>
 
+
+
+
+
+
+  <!--link java script code -->
+  <script src="script/script.js"></script>
 </body>
 </html>
