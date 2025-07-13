@@ -187,12 +187,6 @@ ul {
     .container {
         padding: 22px;
     }
-    body {
-        background: url('../images/bg6.jpg');
-    }
-    #video {
-        display: none;
-    }
     .items {
         width: 36px;
         height: 36px;
